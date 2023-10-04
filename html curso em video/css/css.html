@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <link rel="stylesheet" href="style.css">
+     <!--<style>
+        /*Configurações globais das css*/
+        *{
+            height: 100%;
+        }
+        /* gridiente em css*/
+        body{
+            background-image: linear-gradient(45deg, #F65D3B ,#D63BF6);
+            background-attachment: fixed;
+        }
+    </style>-->
+</head>
+<body>
+    <!--<h1>Aprendendo css</h1>
+    Representação por código hexadecimais
+    <h2 style="background-color: #0000ff; color: #ffffff;">Exemplos de cores</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, deserunt qui. Saepe deleniti dolorem alias, cumque dignissimos, veniam aut vitae reiciendis numquam libero nulla nesciunt fuga ducimus, delectus provident voluptas?</p>
+    Representação por nomes
+    <h2 style="background-color: blue; color: white;">Exemplos de cores</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, sequi sapiente. Exercitationem expedita porro quasi quaerat, sed quis asperiores eaque optio veritatis neque nobis voluptates ipsa excepturi dolor voluptatem vero.</p>
+        Representação por RGB
+    <h2 style="background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);">Exemplos de cores</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, molestias, tenetur nulla nesciunt ipsa obcaecati perspiciatis a exercitationem praesentium vel itaque cum omnis aut animi, facilis natus qui quaerat veritatis!</p>
+    Representação por HSL (Hue, Sturation, Luminosity)
+    <h2 style="background-color: hsl(240, 100%, 50%); color: hsl(0, 0%, 100%);">Exemplos de cores</h2>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum rem obcaecati aliquid illum. Dicta, sunt praesentium, minima veritatis ullam et perspiciatis quaerat quasi quidem corporis deserunt? Commodi itaque iste at.</p>-->
+    <main>
+        <h1>Site de exemplo</h1>
+        <h2>Título</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero repellat impedit numquam commodi a! Accusantium minima natus nobis libero eligendi quo magni dolore deleniti. Neque unde a recusandae cupiditate repellat.</p>
+        <h2>Título 2</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui culpa soluta accusantium quaerat officiis, molestias explicabo necessitatibus! Sit nemo, facere quas possimus modi, iste doloribus, distinctio adipisci rerum aliquid quasi?</p>
+        <h2>Título 3</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam impedit sequi iusto animi corporis deserunt, neque aperiam ab veritatis mollitia expedita consequatur sed repudiandae perferendis incidunt, saepe placeat, iure doloremque?</p>
+    </main>
+    <fieldset>
+        <div>
+            <p><strong>&lt;style&gt;</strong></p>
+            <p><strong>Configurações globais das css</strong></p>
+            <p>*height: 100%;</p>
+            <p><strong>gridiente em css</strong></p>
+            <p>body</p>
+                <p>background-image: linear-gradient(45deg, #F65D3B ,#D63BF6);</p>
+                <p>background-attachment: fixed;</p>
+            <p><strong>&lt;style&gt;</strong></p>
+        </div>
+        <div>
+            <h2>atalhos</h2>
+            <p>Para envelopar - shift + ctrl + p</p>
+            <p>Segurar alt para selecionar varias linhas</p>
+            <h2>Algumas tags</h2>
+            <p>text-align - aliamento da linha</p>
+            <p>height - altura do texto</p>
+            <p>width - largura do texto</p>
+            <p>border - borda</p>
+            <p>padding - preenchimento da borda interno</p>
+            <p>margin - preenchimento da borda externo</p>
+            <p>outline - contorno</p>
+            <p>display: nome - esconde o texto</p>
+            <p>display: block - mostra o texto escondido</p>
+            <h2>Pseudo-classes</h2>
+            <p>div:hover</p>
+            <p>hover - mudanças quando o mouse estiver em cima</p>
+            <p>active - mudanças ao clickar</p>
+            <p>visited - mudanças depois que algo foi clickado</p>
+            <h2>Pseudo-elementos</h2>
+            <p>usamos :: para Pseudo-elementos</p>
+            <p>::before - adicionar algo antes do texto</p>
+            <p>::after adicionar algo depois do texto</p>
+            <h2>Filhos</h2>
+            <p>div > p - Para fazer mudanças no &lt;p&gt; que estiver dentro da div</p>
+            <h2>Tipos de caixa</h2>
+            <p>box-level - quebra a linha, preenche uma linha inteira e pula para proxima para continuar o conteudo</p>
+            <p>Exemplos</p>
+            <li>&lt;div&gt;</li>
+            <li>&lt;h1-h6&gt;</li>
+            <li>&lt;p&gt;</li>
+            <li>&lt;main&gt;</li>
+            <li>&lt;header&gt;</li>
+            <li>&lt;nav&gt;</li>
+            <li>&lt;article&gt;</li>
+            <li>&lt;aside&gt;</li>
+            <li>&lt;footer&gt;</li>
+            <li>&lt;form&gt;</li>
+            <li>&lt;video&gt;</li>
+            <p>inline-level - não quebra a linha, faz um preenchimento na propria linha e da sequencia ao conteudo</p>
+            <p>Exemplos:</p>
+            <li>&lt;span&gt;</li>
+            <li>&lt;a&gt;</li>
+            <li>&lt;code&gt;</li>
+            <li>&lt;small&gt;</li>
+            <li>&lt;strong&gt;</li>
+            <li>&lt;em&gt;</li>
+            <li>&lt;sup&gt; - &lt;sub&gt;</li>
+            <li>&lt;label&gt;</li>
+            <li>&lt;button&gt;</li>
+            <li>&lt;input&gt;</li>
+            <li>&lt;select&gt;</li>
+            <h2>Simplificações</h2>
+            <p>padding: top right bottom left</p>
+            <p>border: width style color</p>
+        </div>
+        <h2>Exemplo de como ajutar video para qualquer tamanho de tela</h2>
+        <code>
+            <h3>foco no position relativo e absolute</h3>
+        <p>div.video</p>
+            <p>padding: 20px;</p>
+            <p>margin: 0px -20px 30px -20px;</p>
+            position: relative;
+            <p>padding-bottom: 57%;</p>
+        
+        <p>div.video > iframe</p>
+            <p>position: absolute;</p>
+            <p>top: 5%;</p>
+            <p>left: 5%;</p>
+            <p>width: 90%;</p>
+            <p>height: 90%;</p>
+        </code>
+    </fieldset>
+</body>
+</html>

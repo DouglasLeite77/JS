@@ -1,0 +1,45 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    --bgcolor: rgb(41, 40, 40);
+    --text-color: white;
+}
+
+body{
+    background-color: var(--bgcolor);
+    color: var(--text-color);
+}
+
+div{
+    text-align: center;
+    padding: 64px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+header{
+    font-size: 20px;
+}
+
+ul{
+    list-style: none;
+}
+
+button{
+    height: 30px;
+    width: 200px;
+    align-items: center;
+    border-radius: 8px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(81, 243, 255);
+    transition: background 400ms;
+}
+button:hover{
+    background: rgb(45, 255, 62);
+}
+

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Folha de pagamento</title>
+    <script src="fpagamento.js"></script>
+    <link rel="stylesheet" href="fpagamento.css">
+</head>
+<body>
+
+    <header>Folha de pagamento</header>
+
+    <div>
+        <ul>
+            <li>
+                Digite o valor da hora trabalhada<BR>
+                <input type="number" name="valor" id="valor">
+            </li><BR>
+            <li>
+                Digite quantas horas trabalhou<BR>
+                <input type="number" name="horas" id="horas">
+            </li><BR>
+            <button onclick="calcular()">Calcular</button><BR><BR>
+            <li>
+                <textarea name="resultado" id="resultado" cols="30" rows="10"></textarea>
+            </li>
+        </ul>
+    </div>
+    
+</body>
+</html>

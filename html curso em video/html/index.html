@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aulas de HTML</title>
+    <link rel="shortcut icon" href="adidas-icon.png" type="image/x-icon">
+</head>
+<body>
+    <h1>Aprendendo HTML</h1>
+
+    <p>Aqui temos a tag para criar uma paragrafo &lt;p&gt;</p>
+    <p>Aqui temos a tag para quebrar uma linha &lt;br&gt;</p>
+    <p>Aqui temos as tags para adicionar alguns simbolos especiais:
+        &reg;
+        &copy;
+        &trade;
+        &euro;
+        &pound;
+        &yen;
+        &cent;
+        &dollar;
+        &real;
+        &Delta;
+    </p>
+    <p>Aqui temos as tags para adicionar alguns emojs: &#x e a numeração do emoji <br>
+        Como exemplo: &#x1F596
+    </p>
+    <p>Para inserir uma imagem ou um gif usamos: &lt;img&gt;</p>
+    <img src="https://media1.giphy.com/media/RIWeAQsVVq7rXyIJKy/giphy.gif?cid=ecf05e474z0pkpvhxgn3gmbkjd5bt57q49hq5ypuwekyamc4&ep=v1_gifs_search&rid=giphy.gif&ct=g" alt="Missy cooper">
+    <p>Para editar o icone da pasta usamos &lt;link:favicon&gt; no head</p>
+    <h2>Formatações</h2>
+    <p>Para colocar em negrito usamos o &lt;strong&gt;</p>
+    <p>Para colocar em itálico usamos o &lt;em&gt;</p>
+    <p>Fazer um <mark style="background-color: cyan;">marcação</mark> de uma parte do texto usamos &lt;mark&gt;</p>
+    <p>Texto <big>grande</big> e texto <small>pequeno</small>: &lt;big&gt; e &lt;small&gt;</p>
+    <p>Para marcar um texto como excluido usamos &lt;del&gt;</p>
+    <p>Para marcar um texto inserido usamos &lt;ins&gt;</p>
+    <p>Para sobrescrever usamos &lt;sup&gt; exemplo: x<sup>20</sup>+3</p>
+    <p>Para subescrever usamos &lt;sub&gt; Exemplos: H<sub>2</sub>O</p>
+    <p>Podemos utilizar o &lt;pre&gt; para aparecer todos os espaçamentos. Exemplos:</p>
+    <pre>
+        <code>
+    num = int(input("digite um número"))
+    if num % 2 == 0:
+        print(f'0 número {num} é par')
+    else:
+        print(f'0 número {num} é ímpar)
+    print('Fim do programa')
+        </code>
+    </pre>
+    <p>Utilizamos também o &lt;code&gt; para formatar melhor o espaço entre as letras quando formos apresentar um código</p>
+    <p>Citações simples usamos &lt;q&gt;</p>
+    <p>Citações complestas usamos o &lt;blockquote&gt;</p>
+    <p>Para abreviações usamos &lt;abbr&gt;</p>
+    <h2>Listas Ordenadas</h2>
+    <ol>
+        <li>Ultilizamos o &lt;ol&gt; para criar listas ordenadas e dentro delas utilizamos o &lt;li&gt; para escrever cada item da lista</li>
+        <li>Dentro do &lt;li&gt; podemos escolher o type e o start </li>
+    </ol>
+    <h2>Listas não ordenadas</h2>
+    <ul>
+        <li>Utilizamos o &lt;ul&gt; para criar listas não ordenadas e utilizamos também o &lt;li&gt; para escrever cada item da lista</li>
+        <li>No &lt;ul&gt; so temos 3 tipos de type que são: disc, circle e square</li>
+    </ul>
+    <h2>Lista de definição</h2>
+    <p>Usamos &lt;dl&gt; para criar uma lista de definição</p>
+    <p>Dentro da lista utilizamos &lt;dt&gt; para o termo e &lt;dd&gt; para a definição </p>
+    <dl>
+        <dt>HTML</dt>
+        <dd>Linguagem de marcação para a criação do conteúdo de um site</dd>
+    </dl>
+    <h2>Links</h2>
+    <p>Para inserir um link clicavel em um texto do site usamos &lt;a&gt;</p>
+    <p>Sempre impostante colocar as tags "target=_blank" e "rel=external" que fazem com que o link seja aberto em outra aba</p>
+    <p>Para links internos podemos deixar sem tags ou colocar "rel=self"</p>
+    <p>./ refere a uma próxima pasta e ../ refere a uma pasta anterior</p>
+    <p>Para disponibilizar para download vamos colocar as tags "download=(o nome do arquivo) e "type=application/pdf" por exemplo, para ver qual é o type de cada arquivos temos esse <a href="https://www.iana.org/assignments/media-types/media-types.xhtml" target="_blank" rel="external">site</a></p>
+    <h2>Imagens e os diferentes tamanhos</h2>
+    <p>Primeiro vamos ter que produzir a imagens em tamanhos diferentes, por exemplo 1000px, 700px e 300px.<br>
+        Em seguida abrimos a tag &lt;picture&gt; e adicionamos ou a maior foto ou a menor com a tag &lt;img&gt;.<br>
+        Adicionado a imagem, abrimos uma tag &lt;source:media:type&gt; (sempre acima da tag da imagem) com "media=(max)" e os px com uma margem de mais 50px 
+    </p>
+    <h2>Áudios</h2>
+    <p>A maneira mais fácil de implementar um áudio no site é com o &lt;audio&gt;</p>
+    <p>Para diferentes tipos, usamos o source:src</p>
+    <p>Alguns do parametros úteis: controls, autoplay, preload, loop.</p>
+
+</body>
+</html>

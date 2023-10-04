@@ -1,0 +1,21 @@
+body{
+    font-size: 17px;
+    color: white;
+    background: #1f1e1e;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+p{
+    margin-bottom: 1.5em;
+    line-height: 1.4em;
+}
+h1{
+    font-weight: normal;
+    color: rgb(189, 88, 88);
+}
+h2{
+    font-weight: normal;
+    color: brown;
+}
+footer{
+    font-size: 13px;
+}
