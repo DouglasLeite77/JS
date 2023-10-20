@@ -38,6 +38,11 @@
     footer:hover{
         opacity: 1;
     }
+    select{
+        height: 200px;
+        width: 200px;
+        font-size: bold;
+    }
     
     ul{
         list-style: none;

@@ -7,5 +7,5 @@ function converter(){
 
     Resultado = Moeda / cotação
 
-    resultado.value = Resultado
+    resultado.value = Resultado.toFixed(2)
 }

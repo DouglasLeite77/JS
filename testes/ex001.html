@@ -6,23 +6,12 @@
     <title>Document</title>
 </head>
 <body>
-   Digite o pais em que você nasceu:  <input type="text" name="" id="n">
-   <input type="button" value="resultado" onclick="resultado()">
-   <div id="res">
-
    </div>
    <script>
-    function resultado(){
-        var nas = document.getElementById('n').value
-        var r = document.getElementById('res')
-        r.innerHTML = `Você nasceu no ${nas}`
-        if (nas == "brasil") {
-            r.innerHTML += `<p>Você é brasileiro</p>`
-        }else{
-            r.innerHTML += `<p>Você é estrangeiro</p>`
-        }
-
-    }
+    var n1 = Number.parseFloat(window.prompt(""))
+    var n2 = Number.parseFloat(window.prompt(""))
+    var s = n1 + n2
+    window.alert(s)
    </script> 
 </body>
 </html>
