@@ -15,14 +15,16 @@ main{
     flex-direction: column;
     border: 2px solid rgb(14, 13, 78);
     margin: auto;
-    height: 225px;
+    height: auto;
     width: 500px;
     border-radius: 10px;
 }
 section #numero{
     margin-top: 10px;
 }
-textarea#lista{
+select#lista{
+    display: flex;
+    margin: 10px;
     width: 150px;
     height: 150px;
 }
