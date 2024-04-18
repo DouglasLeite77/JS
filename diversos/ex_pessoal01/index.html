@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Calculadora</h1>
+    </header>
+    <main>
+        <div id="resultado">0</div>
+        <section id="numeros">
+            <input type="button" value="9" onmousedown="nove()" id="9">
+            <input type="button" value="8" onmousedown="oito()" id="8">
+            <input type="button" value="7" onmousedown="sete()" id="7">
+            <input type="button" value="6" onmousedown="seis()" id="6">
+            <input type="button" value="5" onmousedown="cinco()" id="5">
+            <input type="button" value="4" onmousedown="quatro()" id="4">
+            <input type="button" value="3" onmousedown="tres()" id="3">
+            <input type="button" value="2" onmousedown="dois()" id="2">
+            <input type="button" value="1" onmousedown="um()" id="1">
+            <input type="button" value="0" onmousedown="zero()" id="0" class="zero">
+            <input type="button" value="." onmousedown="ponto()" id=".">
+        </section>
+        <section id="sinais">
+            <input type="button" value="C" onmousedown="C()" id="C">
+            <input type="button" value="CE" onmousedown="CE()" id="CE">
+            <input type="button" value="/" onmousedown="barra()" id="/">
+            <input type="button" value="*" onmousedown="vezes()" id="*">
+            <input type="button" value="-" onmousedown="menos()" id="-">
+            <input type="button" value="+" onmousedown="mais()" id="+" class="mais">
+            <input type="button" value="=" onmousedown="igual()" id="="> 
+        </section>
+    </main>
+</body>
+</html>
