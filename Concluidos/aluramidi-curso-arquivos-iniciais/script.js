@@ -1,6 +1,8 @@
+const listadeteclas = document.querySelectorAll('.tecla');
+
+
 function tocasom(idelementoaudio){
     const elemento = document.querySelector(idelementoaudio);
-
 
     if (elemento && elemento.localName === 'audio') {
         elemento.play();
@@ -11,12 +13,8 @@ function tocasom(idelementoaudio){
     }
 }
 
-const listadeteclas = document.querySelectorAll('.tecla');
 
-let contador = 0;
-
-
-for (contador = 0 ;contador < listadeteclas.length; contador++) {
+for (let contador = 0 ;contador < listadeteclas.length; contador++) {
 
     const tecla = listadeteclas[contador];
     const instrumento = tecla.classList[1];
