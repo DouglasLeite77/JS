@@ -8,15 +8,15 @@
 </head>
 <body>
     <header>
-        <nav>
-            <div>
+        <nav class="navbar">
+            <div class="links">
                 <img src="./imagens/Logo desktop.png" alt="">
                 <a href="#">Home</a>
                 <a href="#">Nossas lojas</a>
                 <a href="#">Novidades</a>
                 <a href="#">Promoções</a>
             </div>
-            <div>
+            <div class="busca">
                 <input type="text" placeholder="Digite o produto">
                 <button>Buscar</button>
             </div>
@@ -24,106 +24,126 @@
         <img src="./imagens/Banner 1 - Desktop.png" alt="">
     </header>
     <main>
-        <section class="secao-main secao-buscar-categoria">
-            <h1>Busque por categorias:</h1>
-            <div class="div-categorias">
+        <section class="categorias">
+            <div>
+                <h1>Busque por categorias:</h1>
+            </div>
+            <div class="div_categorias">
                 <div>
-                    <iframe src="./imagens/Categoria camiseta.png" frameborder="0"></iframe>
+                    <img src="./imagens/Categoria camiseta.png">
                     <p>Camiseta</p>
                 </div>
                 <div>
-                    <iframe src=".//imagens/Categoria Bolsa.png" frameborder="0"></iframe>
+                    <img src=".//imagens/Categoria Bolsa.png">
                     <p>Bolsas</p>
                 </div>
                 <div>
-                    <iframe src="./imagens/Categoria Calçados.png" frameborder="0"></iframe>
+                    <img src="./imagens/Categoria Calçados.png">
                     <p>Sapatos</p>
                 </div>
                 <div>
-                    <iframe src="./imagens/calças.png" frameborder="0"></iframe>
+                    <img src="./imagens/calças.png">
                     <p>Calças</p>
                 </div>
                 <div>
-                    <iframe src="./imagens/Background Color.png" frameborder="0"></iframe>
+                    <img src="./imagens/Background Color.png">
                     <p>Casacos</p>
                 </div>
                 <div>
-                    <iframe src="./imagens/Óculos.png" frameborder="0"></iframe>
+                    <img src="./imagens/Óculos.png">
                     <p>Óculos</p>
                 </div>
             </div>
         </section>
-        <section>
+        <section class="produtos">
             <h1>Produtos que estão bombando!</h1>
-            <div>
-                <img src="./imagens/cards/Camiseta.png" alt="">
-                <h3>Camiseta conforto</h3>
-                <p>Multicores e tamanhos. Tecido de algodão 100%, fresquinho para o verão. Modelagem unissex.</p>
-                <p>R$ 70,00</p>
-                <button>Ver mais</button>
-            </div>
-            <div>
-                <img src="./imagens/cards/Calça.png" alt="">
-                <h3>Calça alfaiataria</h3>
-                <p>Modelo Wide Leg alfaiataria em linho. Uma peça pra vida toda!</p>
-                <p>R$ 180,00</p>
-                <button>Ver mais</button>
-            </div>
-            <div>
-                <img src="./imagens/cards/Tenis.png" alt="">
-                <h3>Tênis Chunky</h3>
-                <p>Snicker casual com solado mais alto e modelagem robusta. Modelo unissex.</p>
-                <p>R$ 250,00</p>
-                <button>Ver mais</button>
-            </div>
-            <div>
-                <img src="./imagens/cards/Jaqueta.png" alt="">
-                <h3>Jaqueta Jeans</h3>
-                <p>Modelo unissex oversized com gola de camurça. Atemporal e autêntica!</p>
-                <p>R$ 150,00</p>
-                <button>Ver mais</button>
-            </div>
-            <div>
-                <img src="./imagens/cards/óculos.png" alt="">
-                <h3>Óculos Redondo</h3>
-                <p>Armação metálica em grafite com lentes arredondadas. Sem erro!</p>
-                <p>R$ 120,00</p>
-                <button>Ver mais</button>
-            </div>
-            <div>
-                <img src="./imagens/cards/Bolsa.png" alt="">
-                <h3>Bolsa coringa</h3>
-                <p>Bolsa camel em couro sintético de alta duração. Ideal para acompanhar você por uma vida!</p>
-                <p>R$ 120,00</p>
-                <button>Ver mais</button>
+            <div class="produtos_itens">
+                <div class="produtos_item">
+                    <img src="./imagens/cards/Camiseta.png" alt="">
+                    <h3>Camiseta conforto</h3>
+                    <div>
+                        <p>Multicores e tamanhos. Tecido de algodão 100%, fresquinho para o verão. Modelagem unissex.</p>
+                        <p class="rs">R$ 70,00</p>
+                    </div>
+                    <button>Ver mais</button>
+                </div>
+                <div class="produtos_item">
+                    <img src="./imagens/cards/Calça.png" alt="">
+                    <h3>Calça alfaiataria</h3>
+                    <div>
+                        <p>Modelo Wide Leg alfaiataria em linho. Uma peça pra vida toda!</p>
+                        <p class="rs">R$ 180,00</p>
+                    </div>
+                    <button>Ver mais</button>
+                </div>
+                <div class="produtos_item">
+                    <img src="./imagens/cards/Tenis.png" alt="">
+                    <h3>Tênis Chunky</h3>
+                    <div>
+                        <p>Snicker casual com solado mais alto e modelagem robusta. Modelo unissex.</p>
+                        <p class="rs">R$ 250,00</p>
+                    </div>
+                    <button>Ver mais</button>
+                </div>
+                <div class="produtos_item">
+                    <img src="./imagens/cards/Jaqueta.png" alt="">
+                    <h3>Jaqueta Jeans</h3>
+                    <div>
+                        <p>Modelo unissex oversized com gola de camurça. Atemporal e autêntica!</p>
+                        <p class="rs">R$ 150,00</p>
+                    </div>
+                    <button>Ver mais</button>
+                </div>
+                <div class="produtos_item">
+                    <img src="./imagens/cards/óculos.png" alt="">
+                    <h3>Óculos Redondo</h3>
+                    <div>
+                        <p>Armação metálica em grafite com lentes arredondadas. Sem erro!</p>
+                        <p class="rs">R$ 120,00</p>
+                    </div>
+                    <button>Ver mais</button>
+                </div>
+                <div class="produtos_item">
+                    <img src="./imagens/cards/Bolsa.png" alt="">
+                    <h3>Bolsa coringa</h3>
+                    <div>
+                        <p>Bolsa camel em couro sintético de alta duração. Ideal para acompanhar você por uma vida!</p>
+                        <p class="rs">R$ 120,00</p>
+                    </div>
+                    <button>Ver mais</button>
+                </div>
             </div>
         </section>
-        <section>
-            <div>
+        <section >
+            <div class="facilidades">
                 <h1>Conheça todas as nossas facilidades</h1>
-                <div>
+                <div class="facilidades_itens">
                     <div>
-                        <img src="./imagens/facilidades/x-diamond.png" alt="">
-                        <h3>PAGUE COM PIX</h3>
-                        <p>Ganhei 5% OFF em pagamentos com pix.</p>
+                        <div>
+                            <img src="./imagens/facilidades/x-diamond.png" alt="">
+                            <h3>PAGUE COM PIX</h3>
+                            <p>Ganhei 5% OFF em pagamentos com pix.</p>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="./imagens/facilidades/arrow-repeat.png" alt="">
+                        <h3>TROCA GRÁTIS</h3>
+                        <p>Fique livre para trocar em até 30 dias.</p>
+                    </div>
+                    <div>
+                        <img src="./imagens/facilidades/flower1.png" alt="">
+                        <h3>SUSTENTABILIDADE</h3>
+                        <p>Moda responsável, que respeita o meio ambiente.</p>
                     </div>
                 </div>
-                <div>
-                    <img src="./imagens/facilidades/arrow-repeat.png" alt="">
-                    <h3>TROCA GRÁTIS</h3>
-                    <p>Fique livre para trocar em até 30 dias.</p>
-                </div>
-                <div>
-                    <img src="./imagens/facilidades/flower1.png" alt="">
-                    <h3>SUSTENTABILIDADE</h3>
-                    <p>Moda responsável, que respeita o meio ambiente.</p>
-                </div>
             </div>
-            <div>
-                <h3>Quer receber nossas novidades, promoções exclusivas e 10% OFF na primeira compra? Cadastre-se!</h3>
-                <div>
-                    <input type="text" placeholder="Digite seu email">
-                    <button>Enviar</button>
+            <div class="email">
+                <div class="email_itens">
+                    <h3>Quer receber nossas novidades, promoções exclusivas e 10% OFF na primeira compra? Cadastre-se!</h3>
+                    <div>
+                        <input type="text" placeholder="Digite seu email">
+                        <button>Enviar</button>
+                    </div>
                 </div>
             </div>
         </section>
