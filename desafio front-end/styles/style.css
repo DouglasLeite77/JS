@@ -49,13 +49,14 @@ header img {
 
 .categorias h1 {
   display: flex;
-  width: 100%;
+  align-items: center;
   margin: 2.5rem;
   justify-content: center;
   font-size: 32px;
 }
 .categorias .div_categorias {
   display: flex;
+  justify-content: center;
   gap: 30px;
   margin: 0 165px;
 }
@@ -78,13 +79,13 @@ header img {
 }
 .produtos h1 {
   display: flex;
-  width: 100%;
   margin: 2.5rem;
   justify-content: center;
   font-size: 32px;
 }
 .produtos .produtos_itens {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 30px;
   margin: 0 165px;
@@ -169,19 +170,46 @@ header img {
   display: flex;
   justify-content: center;
 }
-.email .email_itens div input {
+.email .email_itens div #input_email {
   width: 456px;
   height: 38px;
   padding-left: 1rem;
   font-size: 16px;
 }
-.email .email_itens div button {
+.email .email_itens div #input_submit {
   width: 84px;
   height: 42px;
   background-color: #9353FF;
   color: white;
   font-size: 16px;
   border: none;
+}
+.email .email_itens div #input_submit:active {
+  background-color: #370096;
+}
+
+.email_submit {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 65.5px auto;
+  width: 700px;
+}
+.email_submit .email_submit_cadastrado {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20.5px 64px;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+}
+.email_submit .email_submit_texto {
+  margin-top: 2rem;
+  font-size: 14px;
 }
 
 footer {
