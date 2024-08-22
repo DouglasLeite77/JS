@@ -127,6 +127,96 @@ header{
         }
     }
 }
+.modal{
+    margin: 0px auto;
+    margin-top: 50px;
+    height: 522px;
+    width: 700px;
+    border: 1px solid black;
+    .modal_titulo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 0px;
+        gap: 20px;
+        color: white;
+        background-color: black;
+        margin: 0 auto;
+    }
+    .modal_opcoes{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 16px 16px 32px 16px;
+        width: 700px;
+        margin: 0 auto;
+        .rs{
+            font-weight: bolder;
+            font-size: 16px;
+        }
+        img{
+            width: 350px;
+        }
+        .modal_itens{
+            display: flex;
+            flex-direction: column;
+            .modal_itens_info{
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+                .borda{
+                    padding-bottom: 24px;
+                    border-bottom: 1px solid black;
+                }
+            }
+        }
+        .modal_cores{
+            display: flex;
+            flex-direction: column;
+            margin-top: 16px;
+            border-top: 1px solid rgba(128, 128, 128, 0.356);
+            padding-top: 16px;
+            gap: 16px;
+            .cores{
+                display: grid;
+                width: 180px;
+
+                input:nth-of-type(1){
+                    grid-column: 1/2;
+                    grid-row: 1/2;
+                    margin-bottom: 8px;
+                }
+                input:nth-of-type(2){
+                    grid-column: 2/3;
+                    grid-row: 1/2;
+                    margin-bottom: 8px;
+                }
+                input:nth-of-type(3){
+                    grid-column: 3/4;
+                    grid-row: 1/2;
+                    margin-bottom: 8px;
+                }
+                p:nth-of-type(1){
+                    grid-column: 1/2;
+                    grid-row: 2/3;
+                    justify-self: center;
+                }
+                p:nth-of-type(2){
+                    grid-column: 2/3;
+                    grid-row: 2/3;
+                    justify-self: center;
+                }
+                p:nth-of-type(3){
+                    grid-column: 3/4;
+                    grid-row: 2/3;
+                    justify-self: center;
+                }
+
+            }
+        }
+
+    }
+}
 .facilidades{
     background-color: black;
     margin-top: 80px;
@@ -197,6 +287,7 @@ header{
     align-items: center;
     margin: 65.5px auto;
     width: 700px;
+
     .email_submit_cadastrado{
         display: flex;
         justify-content: center;

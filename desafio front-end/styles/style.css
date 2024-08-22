@@ -124,6 +124,94 @@ header img {
   border: none;
 }
 
+.modal {
+  margin: 0px auto;
+  margin-top: 50px;
+  height: 522px;
+  width: 700px;
+  border: 1px solid black;
+}
+.modal .modal_titulo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0px;
+  gap: 20px;
+  color: white;
+  background-color: black;
+  margin: 0 auto;
+}
+.modal .modal_opcoes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 16px 32px 16px;
+  width: 700px;
+  margin: 0 auto;
+}
+.modal .modal_opcoes .rs {
+  font-weight: bolder;
+  font-size: 16px;
+}
+.modal .modal_opcoes img {
+  width: 350px;
+}
+.modal .modal_opcoes .modal_itens {
+  display: flex;
+  flex-direction: column;
+}
+.modal .modal_opcoes .modal_itens .modal_itens_info {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.modal .modal_opcoes .modal_itens .modal_itens_info .borda {
+  padding-bottom: 24px;
+  border-bottom: 1px solid black;
+}
+.modal .modal_opcoes .modal_cores {
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
+  border-top: 1px solid rgba(128, 128, 128, 0.356);
+  padding-top: 16px;
+  gap: 16px;
+}
+.modal .modal_opcoes .modal_cores .cores {
+  display: grid;
+  width: 180px;
+}
+.modal .modal_opcoes .modal_cores .cores input:nth-of-type(1) {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  margin-bottom: 8px;
+}
+.modal .modal_opcoes .modal_cores .cores input:nth-of-type(2) {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  margin-bottom: 8px;
+}
+.modal .modal_opcoes .modal_cores .cores input:nth-of-type(3) {
+  grid-column: 3/4;
+  grid-row: 1/2;
+  margin-bottom: 8px;
+}
+.modal .modal_opcoes .modal_cores .cores p:nth-of-type(1) {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  justify-self: center;
+}
+.modal .modal_opcoes .modal_cores .cores p:nth-of-type(2) {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  justify-self: center;
+}
+.modal .modal_opcoes .modal_cores .cores p:nth-of-type(3) {
+  grid-column: 3/4;
+  grid-row: 2/3;
+  justify-self: center;
+}
+
 .facilidades {
   background-color: black;
   margin-top: 80px;
