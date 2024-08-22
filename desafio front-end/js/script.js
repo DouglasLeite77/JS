@@ -12,3 +12,12 @@ const swiper = new Swiper('.swiper', {
     email.style.display='none'
     email_submit.style.display='flex'
   })
+
+  const btnProdutos = document.querySelectorAll(".btn-produto")
+  const modal = document.querySelector(".modal")
+
+  btnProdutos.forEach((btn) =>{
+    btn.addEventListener("click", () => {
+      modal.style.display='block'
+    })
+  })
