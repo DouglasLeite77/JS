@@ -16,9 +16,26 @@ function mostrarPensamentos(pensamentos){
           <img src="assets/imagens/aspas-azuis.png" alt="Aspas azuis" class="icone-aspas">
           <div class="pensamento-conteudo">${pensamento.conteudo}</div>
           <div class="pensamento-autoria">${pensamento.autoria}</div>
+          <div class="icones">
+          <button class="botao-editar" value="${pensamento.id}"><img src="./assets/imagens/icone-editar.png"></button>
+          <button class="botao-excluir" value="${pensamento.id}"><img src="./assets/imagens/icone-excluir.png"></button>
+          </div>
           </li>
         `
     });
+        const botoesEditar = document.querySelectorAll(".botao-editar")
+        botoesEditar.forEach(botao => {
+            botao.addEventListener("click", () => buscaPensamento(botao.value))
+        })
+        const botoesExcluir = document.querySelectorAll(".botao-excluir")
+        botoesExcluir.forEach(botao => {
+            botao.addEventListener("click", () => excluirPensamento(botao.value))
+        })
+}
+async function excluirPensamento(id) {
+    const buscarpensamento = await fetch(`http://localhost:3000/pensamentos/${id}`, {
+        method: "DELETE"
+    })
 }
 
 async function salvarPensamento(pensamentos) {
@@ -32,19 +49,18 @@ async function salvarPensamento(pensamentos) {
 }
 formulario.addEventListener("submit", enviarDados)
 
-async function enviarDados(event){
-    event.preventDefault()
-    const buscarApi = await fetch(api)
-    const pensamentos = await buscarApi.json()
+ function enviarDados(event){
+    event.preventDefault();
 
     const conteudo = document.querySelector("#pensamento-conteudo").value
     const id = document.querySelector("#pensamento-id").value
     const autoria = document.querySelector("#pensamento-autoria").value
-
-    await salvarPensamento({ conteudo, autoria});
-    mostrarPensamentos()
+    if(id != ""){
+        editarPensamento({ conteudo, autoria, id});
+    }else{
+        salvarPensamento({ conteudo, autoria});
+    }
 }
-
 
 async function buscaPensamento(id) {
     const buscarpensamento = await fetch(`http://localhost:3000/pensamentos/${id}`)
@@ -57,7 +73,6 @@ async function buscaPensamento(id) {
     autoria.value = pensamentos.autoria
     conteudo.value = pensamentos.conteudo
 }
-buscaPensamento("9bf2")
 
 async function editarPensamento(pensamento) {
     const buscarApi = await fetch(`http://localhost:3000/pensamentos/${pensamento.id}`, {
@@ -68,6 +83,8 @@ async function editarPensamento(pensamento) {
         body: JSON.stringify(pensamento)
     })
 }
+
+
 
 const btnCacenlar = document.querySelector("#botao-cancelar")
 

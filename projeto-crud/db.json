@@ -6,14 +6,14 @@
       "autoria": "Grupo da família"
     },
     {
-      "id": "4c7d",
-      "conteudo": "Da vida reclama, mas sem ela não vive!",
-      "autoria": "Mestre Yoda"
+      "conteudo": "Da vida reclama\n",
+      "autoria": "Mestre Yoda",
+      "id": "4c7d"
     },
     {
-      "id": "5b8a",
       "conteudo": "Na minha máquina funciona!",
-      "autoria": "Dev"
+      "autoria": "Dev ",
+      "id": "5b8a"
     },
     {
       "id": "68uy",
