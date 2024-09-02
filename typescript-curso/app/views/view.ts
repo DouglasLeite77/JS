@@ -1,3 +1,5 @@
+import { tempoDeExecucao } from "../decorators/Tempo-de-execucao.js";
+
 export abstract class View<T>{
     
     protected elemento: HTMLElement;
@@ -12,7 +14,7 @@ export abstract class View<T>{
         }
 
         protected abstract template(model: T): string;
-    
+        
         update(model: T): void{
             const template = this.template(model)
             this.elemento.innerHTML = template 
