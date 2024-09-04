@@ -1,4 +1,6 @@
-export class negociacao {
+import { imprivel } from "../utils/imprivel.js";
+
+export class negociacao implements imprivel {
 
 
     constructor(
@@ -13,6 +15,14 @@ export class negociacao {
     get data(): Date{
         const data = new Date(this._data.getTime())
         return data
+    }
+
+    paraTexto(): string{
+        return `
+        data: ${this.data}
+        quantidade: ${this.quantidade}
+        valor: ${this.valor}
+        `
     }
 
     public static criarNegociacao(dataString: string, quantidadeString: string, valorString: string): negociacao{

@@ -4,8 +4,11 @@ import { tempoDeExecucao } from "../decorators/Tempo-de-execucao.js"
 import { diasDaSemana } from "../enums/dias-da-semana.js"
 import { Negociacoes } from "../models/negociacoes.js"
 import { negociacao } from "../models/negociação.js"
+import { negociacoesService } from "../services/negociacoes-service.js"
+import { imprimir } from "../utils/imprimir.js"
 import { MensagemView } from "../views/mensagem-view.js"
 import { NegociacoesView } from "../views/negociacoes-view.js"
+
 
 export class negociacaoController{
     @domInjector('#data')
@@ -17,6 +20,7 @@ export class negociacaoController{
     private negociacoes = new Negociacoes();
     private negociacoesView = new NegociacoesView('#negociascoesView')
     private mensagemview = new MensagemView('#mensagemView')
+    private negociacaoService = new negociacoesService()
 
     constructor(){
         this.negociacoesView.update(this.negociacoes)
@@ -33,13 +37,20 @@ export class negociacaoController{
         this.negociacoes.adiciona(Negociacao);
         this.negociacoesView.update(this.negociacoes)
         this.mensagemview.update("Essa negociação foi adicionada com sucesso")
+        imprimir(Negociacao, this.negociacoes)
         this.limparForm()
         }
     private ehDiaUtil(data: Date){
         return data.getDay() > diasDaSemana.DOMINGO && data.getDay() < diasDaSemana.SABADO
     }   
     importaDados(): void{
-        alert("oi")
+        this.negociacaoService.obterNegociacoes()
+        .then(negociacaoDeHoje => {
+            for(let negociacao of negociacaoDeHoje){
+                this.negociacoes.adiciona(negociacao)
+            }
+            this.negociacoesView.update(this.negociacoes)
+        })
     }
 
     private limparForm(): void {
