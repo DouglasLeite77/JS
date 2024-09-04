@@ -38,6 +38,9 @@ export class negociacaoController{
     private ehDiaUtil(data: Date){
         return data.getDay() > diasDaSemana.DOMINGO && data.getDay() < diasDaSemana.SABADO
     }   
+    importaDados(): void{
+        alert("oi")
+    }
 
     private limparForm(): void {
         this.inputData.value = ""
