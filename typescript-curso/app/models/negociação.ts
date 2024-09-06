@@ -25,6 +25,10 @@ export class negociacao implements imprivel {
         `
     }
 
+    ehIgual(negociacao : negociacao): boolean{
+        return this.data.getDate() === negociacao.data.getDate() && this.data.getMonth() === negociacao.data.getMonth() && this.data.getFullYear() === negociacao.data.getFullYear()
+    }
+
     public static criarNegociacao(dataString: string, quantidadeString: string, valorString: string): negociacao{
         const exp = /-/g;
         const data = new Date(dataString.replace(exp, ","))
