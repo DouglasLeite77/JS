@@ -1,6 +1,6 @@
 import { FormatoData } from "../enums/FormatoData.js";
 import { formatarData, formatarMoeda } from "../formatters/formatters.js";
-import conta from "./conta.js";
+import conta from "./conta_antiga.js";
 
 let saldo: number = 3000;
 

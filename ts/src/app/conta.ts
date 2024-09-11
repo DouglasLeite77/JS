@@ -1,47 +1,47 @@
-import { TipoTransacao } from "../enums/TipoTransacao.js";
-import { GrupoTransacao } from "../types/GrupoTransacao.js";
-import { Transacao } from "../types/transacao.js";
+import { validaDebito } from "../decorators/validaDebito.js"
+import { validaDeposito } from "../decorators/validaDeposito.js"
+import { TipoTransacao } from "../enums/TipoTransacao.js"
+import { Armazenador } from "../types/Armazenador.js"
+import { GrupoTransacao } from "../types/GrupoTransacao.js"
+import { Transacao } from "../types/transacao.js"
+import saldo from "./saldo.js"
 
+export class Conta {
+    nome: string
+    saldo: number = Armazenador.obter<number>("saldo") || 0
+    transacoes: Transacao[] = Armazenador.obter<Transacao[]>(("transacao"), (key: string, value: string) =>{
+        if(key == "data"){
+            return new Date(value)
+        }
+        return value
+    }) || []
 
-let saldo = JSON.parse(localStorage.getItem("saldo")) || 0;
-
-const transacoes: Transacao[] = JSON.parse(localStorage.getItem("transações"), (key: string, value: string) => {
-    if(key == "data"){
-        return new Date(value)
+    constructor(nome: string){
+        this.nome
     }
-    return value
-}) || []
 
-function debitar(valor: number): void{
-    if(saldo < 0){
-        throw new Error("O valor debitado deve ser maior que zero") 
+    @validaDebito
+    debitar(valor: number): void{
+        this.saldo -= valor
+        Armazenador.salvar("saldo", this.saldo.toString())
     }
-    if(valor > saldo){
-        throw new Error("Saldo insuficiente")
+    @validaDeposito
+    depositar(valor: number): void{
+        this.saldo += valor
+        Armazenador.salvar("saldo", saldo.toString())
     }
-    saldo -= valor
-    localStorage.setItem("saldo", saldo.toString())
-}
-function depositar(valor: number): void{
-    if(valor <= 0){
-        throw new Error("O valor depositado deve ser maior que zero") 
-    }
-    saldo += valor
-    localStorage.setItem("saldo", saldo.toString())
-}
-
-const conta = {
+    
     getSaldo(){
         return saldo
-    },
+    }
 
     getDataAcesso(): Date{
         return new Date()
-    },
+    }
 
     getGrupoTransacao(): GrupoTransacao[]{
         const gruposTransacoes: GrupoTransacao[] = []
-        const listaTransacoes: Transacao[] = structuredClone(transacoes)
+        const listaTransacoes: Transacao[] = structuredClone(this.transacoes)
 
         const transacoesOrdenadas: Transacao[] = listaTransacoes.sort((t1, t2) => t2.data.getTime() - t1.data.getTime())
         let labelAtualGrupoTransacoes: string = ""
@@ -59,26 +59,35 @@ const conta = {
         }
         return gruposTransacoes
 
-    },
-
+    }
     registraTransacao(novaTransacao: Transacao): void{
 
         if ( novaTransacao.tipoTransacao == TipoTransacao.DEPOSITO) {
-            depositar(novaTransacao.valor)
+            this.depositar(novaTransacao.valor)
         } else if (novaTransacao.tipoTransacao == TipoTransacao.TRANSFERENCIA || novaTransacao.tipoTransacao == TipoTransacao.PAGAMENTO_BOLETO) {
-            debitar(novaTransacao.valor)
+            this.debitar(novaTransacao.valor)
             novaTransacao.valor *= -1
         } else {
             throw new Error("Tipo de transação é invalido") 
         }
 
-        transacoes.push(novaTransacao)
+        this.transacoes.push(novaTransacao)
         console.log(this.getGrupoTransacao())
-        
-        localStorage.setItem("transações", JSON.stringify(transacoes))
+        Armazenador.salvar("transações", JSON.stringify(this.transacoes))
+    }
+
+}
+
+export class contaPremium extends Conta{
+
+    registraTransacao(novaTransacao: Transacao): void{
+        if(novaTransacao.tipoTransacao === TipoTransacao.DEPOSITO){
+            novaTransacao.valor += 0.5
+        }
+        super.registraTransacao(novaTransacao)
     }
 }
 
-
+const conta = new Conta("Joana da Silva")
 
 export default conta

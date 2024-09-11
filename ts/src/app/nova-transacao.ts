@@ -1,6 +1,6 @@
 import { TipoTransacao } from "../enums/TipoTransacao.js";
 import { Transacao } from "../types/transacao.js";
-import conta from "./conta.js";
+import conta from "./conta_antiga.js";
 import ExtratoComponent from "./extrato_transações.js";
 import saldoComponent from "./saldo.js";
 
