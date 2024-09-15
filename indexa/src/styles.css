@@ -4,6 +4,8 @@
     box-sizing: border-box;
 }
 
+@import url('https://fonts.googleapis.com/css?family=Zen+Dots&display=swap');
+
 body{
     min-height: 100vh;
     background: linear-gradient(180deg, #3D8BFD 0%, #E7F1FF 100%);
