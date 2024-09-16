@@ -6,13 +6,42 @@ import { CabecalhoComponent } from './componentes/cabecalho/cabecalho.component'
 import { SeparadorComponent } from './componentes/separador/separador.component';
 import { ContatoComponent } from './componentes/contato/contato.component';
 
+import agenda from './agenda.json'
+import { startWith } from 'rxjs';
+import { FormsModule } from '@angular/forms';
+import { FormularioContatoComponent } from './paginas/formulario-contato/formulario-contato.component';
+
+interface contato{
+  id: number;
+  nome: string;
+  telefone: string
+}
+
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, ContainerComponent, CabecalhoComponent, SeparadorComponent, ContatoComponent],
+  imports: [CommonModule, RouterOutlet, ContainerComponent, CabecalhoComponent, SeparadorComponent, ContatoComponent, FormsModule, FormularioContatoComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
   alfabeto: string = 'abcdefghijklmnopqrstuvwxyz'
+  contatos: contato[] = agenda
+
+  filtroPorTexto: string = ""
+
+  filtrarContatoPorTexto(): contato[] {
+    if(!this.filtroPorTexto){
+      return this.contatos
+    }
+    return this.contatos.filter(contato => {
+      return contato.nome.toLowerCase().includes(this.filtroPorTexto.toLowerCase())
+    })
+  }
+
+  filtrarContatoPorLetra(letra: string): contato[]{
+    return this.filtrarContatoPorTexto().filter(contato => {
+      return contato.nome.toLocaleLowerCase().startsWith(letra)
+    })
+  }
 }
