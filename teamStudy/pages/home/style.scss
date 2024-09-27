@@ -1,6 +1,206 @@
 @import '../styles/variaveis.scss';
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body{
     background-color: $cor-secundaria;
     color: black;
+}
+
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: $cor-primaria;
+    padding: 22px;
+
+    h1{
+        font-size: 1.5rem;
+    }
+    nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 300px;
+
+        a{
+            list-style: none;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: black;
+        }
+    }
+}
+
+main{
+    padding: 0 100px;
+
+    .container_intro{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+
+        img{
+            max-width: 600px;
+        }
+
+        .container_intro_textos{
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            max-width: 600px;
+
+            h1{
+                font-size: 2.5rem;
+            }
+            p{
+                font-size: 1.5rem;
+            }
+            button{
+                width: 250px;
+                background-color: $cor-primaria;
+                color: white;
+                padding: 16px 32px;
+                border-radius: 5px;
+                border: none;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .container_sobre{
+        margin: 100px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        .sobre, .funciona{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            h1{
+                font-size: 3rem;
+            }
+            p{
+                font-size: 1.5rem;
+                font-weight: 500;
+            }
+        }
+    }
+
+    .container_diferencial{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        position: relative;
+        background-color: white;
+        margin-bottom: 100px;
+
+        img{
+            height: 900px;
+        }
+        button{
+            position: absolute;
+            top: 90%;
+            right: 80%;
+            width: 250px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            padding: 10px;
+            border: none;
+            border-bottom: 2px solid $cor-primaria;
+            color: $cor-primaria;
+            background-color: white;
+            cursor: pointer;
+        }
+
+        .container_diferencial_texto{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 900px;
+            gap: 20px;
+            padding-top: 70px;
+
+            
+
+            h2{
+                font-size: 2rem;
+            }
+            h1{
+                font-size: 4rem;
+                padding-bottom: 10px;
+                color: $cor-primaria;
+            }
+            .textos{
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 25px;
+
+                .textos_card{
+                    text-align: center;
+                    width: 250px;
+                    h3{
+                        color: $cor-primaria;
+                        padding-bottom: 5px;
+                    }
+                    p{
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .container_depoimentos{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 68px;
+        margin-bottom: 100px;
+
+        h1{
+            font-size: 3rem;
+        }
+
+        .container_depoimentos_texto{
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            gap: 30px;
+            p{
+                font-size: 1.2rem;
+            }
+        }
+        .comece{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+
+            button{
+                margin-top: 30px;
+                padding: 16px 32px;
+                background-color: white;
+                color: $cor-primaria;
+                border: none;
+                cursor: pointer;
+                font-weight: 600;
+            }
+
+            img{
+                width: 700px;
+            }
+        }
+    }
+    
 }
