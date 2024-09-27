@@ -33,9 +33,6 @@ header nav a {
   color: black;
 }
 
-main {
-  padding: 0 100px;
-}
 main .container_intro {
   display: flex;
   justify-content: center;
