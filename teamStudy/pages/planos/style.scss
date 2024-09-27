@@ -4,19 +4,18 @@
     margin: 0;
     padding: 0;
 }
-
 main{
     background-color: white;
 
     .card_verde{
         background-color: $cor-primaria;
-        height: 460px;
+        height: 480px;
         position: relative;
         left: 20%;
     }
     .beneficios_itens{
         display: flex;
-        gap: 35px;
+        gap: 40px;
         position: relative;
         right: 35%;
         padding-left: 165px;
@@ -66,12 +65,12 @@ main{
     .img02{
         h3{
             top: 15%;
-            right: 45%;
+            right: 44.5%;
         }
     }
     .img03{
         h3{
-            top: 197%;
+            top: 199.5%;
         }
     }
     .card_texto{
@@ -126,10 +125,10 @@ main{
         .btn_branco{
             background-color: white;
             color: $cor-primaria;
+            margin-left: 92%;
         }
     }
 }
-
 header{
     display: flex;
     justify-content: space-around;

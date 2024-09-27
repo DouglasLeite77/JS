@@ -8,13 +8,13 @@ main {
 }
 main .card_verde {
   background-color: #31C957;
-  height: 460px;
+  height: 480px;
   position: relative;
   left: 20%;
 }
 main .beneficios_itens {
   display: flex;
-  gap: 35px;
+  gap: 40px;
   position: relative;
   right: 35%;
   padding-left: 165px;
@@ -57,10 +57,10 @@ main .card_img h3 {
 }
 main .img02 h3 {
   top: 15%;
-  right: 45%;
+  right: 44.5%;
 }
 main .img03 h3 {
-  top: 197%;
+  top: 199.5%;
 }
 main .card_texto {
   display: flex;
@@ -111,6 +111,7 @@ main .container_beneficios_cards {
 main .container_beneficios_cards .btn_branco {
   background-color: white;
   color: #31C957;
+  margin-left: 92%;
 }
 
 header {
