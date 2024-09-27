@@ -102,9 +102,13 @@ main{
         background-color: white;
         margin-bottom: 100px;
 
-        img{
+        .div_img{
             height: 900px;
+            img{
+                height: 900px;
+            }
         }
+        
         button{
             position: absolute;
             top: 90%;
@@ -202,5 +206,115 @@ main{
             }
         }
     }
-    
+    .container_planos{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        height: 800px;
+        background-color: white;
+
+        h1{
+            width: 100%;
+            font-size: 3.5rem;
+            color: $cor-primaria;
+            padding-left: 100px;
+            margin: 20px 0;
+        }
+
+        .container_planos_card{
+            display: flex;
+            flex-wrap: wrap;
+            width: 600px;
+            height: 280px;
+            background-color: $cor-secundaria;
+            padding: 25px;
+            margin: 0 0 0 30px;
+
+            h2{
+                width: 80%;
+                color: $cor-primaria;
+                font-size: 1.8rem;
+            }
+            p{
+                font-size: 1.4rem;
+                width: 70%;
+                font-weight: 700;
+                margin-right: 10px;
+            }
+            button{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 10px;
+                color: white;
+                background-color: $cor-primaria;
+                font-size: 1.2rem;
+                padding: 25px 25px;
+                height: 36px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            div{
+                h3{
+                    font-size: 1.5rem;
+                    color: $cor-primaria;
+                }
+                p{
+                    font-size: .8rem;
+                    padding-left: 50%;
+                }
+            }
+        }
+    }
+}
+footer{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    padding: 30px 0;
+    background-color: $cor-primaria;
+
+    h1{
+        font-size: 1.5rem;
+    }
+
+    .logo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        img{
+            width: 200px;
+        }
+    }
+    .contatos{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .borde{
+            padding-bottom: 10px;
+            border-bottom: 2px solid black;
+        }
+    }
+    .informacoes{
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        
+        div{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        a{
+            text-decoration: none;
+            list-style: none;
+            color: black;
+            font-size: 1.2rem;
+        }
+    }
 }
