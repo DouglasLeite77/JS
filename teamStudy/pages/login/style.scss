@@ -1,0 +1,160 @@
+@import '../styles/variaveis.scss';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main{
+    .head{
+        display: flex;
+        flex-direction: column;
+        padding: 60px 100px; 
+        gap: 5px;
+        background-color: $cor-secundaria;
+        width: 100%;
+        font-family: Arial, Helvetica, sans-serif;
+        
+
+        h2{
+            font-size: 1.2rem;
+        }
+        h1{
+            font-size: 3.5rem;
+        }
+    }
+    .container_login{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        margin-top: 380px;
+        margin-bottom: 100px;
+        img{
+            width: 840px;
+            position: absolute;
+            top: 40%;
+            z-index: 1;
+        }
+        input{
+            height: 48px;
+            width: 350px;
+            padding: 16px 30px;
+            background-color: $cor-secundaria;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2rem;
+            color: black;
+            z-index: 2;
+
+        }
+        div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            button{
+                height: 38px;
+                width: 260px;
+                background-color: $cor-primaria;
+                font-size: 1.4rem;
+                font-weight: 600;
+                border: none;
+                border-radius: 10px;
+                cursor: pointer;
+                margin-bottom: 10px;
+                box-shadow: 0px 5px 5px 1px rgba(0, 0, 0, 0.301);
+            }
+            a{
+                font-size: 0.9rem;
+            }
+        }
+    }
+}
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: $cor-primaria;
+    padding: 22px;
+
+    h1{
+        font-size: 1.5rem;
+    }
+    nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 300px;
+
+        a{
+            list-style: none;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: black;
+        }
+    }
+}
+footer{
+    display: flex;
+    justify-content: space-around;
+
+    padding: 30px 0;
+    background-color: $cor-primaria;
+
+    h1{
+        font-size: 1.5rem;
+    }
+
+    .logo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        img{
+            width: 200px;
+        }
+    }
+    .contatos{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .borde{
+            padding-bottom: 10px;
+            border-bottom: 2px solid black;
+        }
+        .icons{
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            height: 26px;
+        }
+    }
+    .informacoes{
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        
+        div{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        a{
+            text-decoration: none;
+            list-style: none;
+            color: black;
+            font-size: 1.2rem;
+        }
+    }
+}
+.footer{
+    background-color: $cor-primaria;
+    padding: 15px 200px;
+    font-size: 1rem;
+}
