@@ -14,7 +14,7 @@ header {
   justify-content: space-around;
   align-items: center;
   background-color: #31C957;
-  padding: 22px;
+  padding: 15px;
 }
 header h1 {
   font-size: 1.5rem;
@@ -23,7 +23,7 @@ header nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 300px;
+  width: 350px;
 }
 header nav a {
   list-style: none;
@@ -31,13 +31,18 @@ header nav a {
   font-size: 1.2rem;
   font-weight: 600;
   color: black;
+  padding: 10px;
+  border-radius: 10px;
+}
+header nav a:hover {
+  background-color: rgba(255, 255, 255, 0.3215686275);
 }
 
 main .container_intro {
   display: flex;
-  justify-content: center;
   align-items: center;
   margin-top: 50px;
+  padding: 0 100px;
 }
 main .container_intro img {
   max-width: 600px;
@@ -68,6 +73,7 @@ main .container_sobre {
   display: flex;
   flex-direction: column;
   gap: 50px;
+  padding: 0 100px;
 }
 main .container_sobre .sobre, main .container_sobre .funciona {
   display: flex;
@@ -150,6 +156,7 @@ main .container_depoimentos {
   align-items: center;
   gap: 68px;
   margin-bottom: 100px;
+  padding: 0 100px;
 }
 main .container_depoimentos h1 {
   font-size: 3rem;
@@ -190,12 +197,13 @@ main .container_planos {
   height: 800px;
   background-color: white;
   padding-bottom: 40px;
+  padding: 0 100px;
 }
 main .container_planos h1 {
   width: 100%;
   font-size: 3.5rem;
   color: #31C957;
-  padding-left: 100px;
+  padding-left: 150px;
   margin: 20px 0;
 }
 main .container_planos .container_planos_card {

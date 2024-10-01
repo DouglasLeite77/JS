@@ -16,8 +16,7 @@ header{
     justify-content: space-around;
     align-items: center;
     background-color: $cor-primaria;
-    padding: 22px;
-
+    padding: 15px;
     h1{
         font-size: 1.5rem;
     }
@@ -25,7 +24,7 @@ header{
         display: flex;
         align-items: center;
         justify-content: space-between;
-        width: 300px;
+        width: 350px;
 
         a{
             list-style: none;
@@ -33,18 +32,22 @@ header{
             font-size: 1.2rem;
             font-weight: 600;
             color: black;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        a:hover{
+            background-color: #ffffff52;
         }
     }
 }
 
 main{
 
-
     .container_intro{
         display: flex;
-        justify-content: center;
         align-items: center;
         margin-top: 50px;
+        padding: 0 100px;
 
         img{
             max-width: 600px;
@@ -79,6 +82,7 @@ main{
         display: flex;
         flex-direction: column;
         gap: 50px;
+        padding: 0 100px;
         .sobre, .funciona{
             display: flex;
             flex-direction: column;
@@ -170,6 +174,7 @@ main{
         align-items: center;
         gap: 68px;
         margin-bottom: 100px;
+        padding: 0 100px;
 
         h1{
             font-size: 3rem;
@@ -214,12 +219,13 @@ main{
         height: 800px;
         background-color: white;
         padding-bottom: 40px;
+        padding: 0 100px;
 
         h1{
             width: 100%;
             font-size: 3.5rem;
             color: $cor-primaria;
-            padding-left: 100px;
+            padding-left: 150px;
             margin: 20px 0;
         }
 

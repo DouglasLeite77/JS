@@ -102,6 +102,12 @@ main .card_texto button {
 main .card_texto button h1 {
   font-size: 1rem;
 }
+main .card_texto button:hover {
+  background-color: rgba(49, 201, 87, 0.7176470588);
+}
+main .card_texto .btn_branco:hover {
+  background-color: rgba(255, 255, 255, 0.712);
+}
 main .container_beneficios_cards {
   display: flex;
   gap: 50px;
@@ -119,7 +125,7 @@ header {
   justify-content: space-around;
   align-items: center;
   background-color: #31C957;
-  padding: 22px;
+  padding: 15px;
 }
 header h1 {
   font-size: 1.5rem;
@@ -128,7 +134,7 @@ header nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 300px;
+  width: 350px;
 }
 header nav a {
   list-style: none;
@@ -136,6 +142,11 @@ header nav a {
   font-size: 1.2rem;
   font-weight: 600;
   color: black;
+  padding: 10px;
+  border-radius: 10px;
+}
+header nav a:hover {
+  background-color: rgba(255, 255, 255, 0.3215686275);
 }
 
 footer {

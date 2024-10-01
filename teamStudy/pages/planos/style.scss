@@ -3,6 +3,7 @@
 *{
     margin: 0;
     padding: 0;
+    
 }
 main{
     background-color: white;
@@ -115,6 +116,12 @@ main{
                 font-size: 1rem;
             }
         }
+        button:hover{
+            background-color: #31c957b7;
+        }
+        .btn_branco:hover{
+            background-color: rgba(255, 255, 255, 0.712);
+        }
     }
     
     .container_beneficios_cards{
@@ -134,8 +141,7 @@ header{
     justify-content: space-around;
     align-items: center;
     background-color: $cor-primaria;
-    padding: 22px;
-
+    padding: 15px;
     h1{
         font-size: 1.5rem;
     }
@@ -143,7 +149,7 @@ header{
         display: flex;
         align-items: center;
         justify-content: space-between;
-        width: 300px;
+        width: 350px;
 
         a{
             list-style: none;
@@ -151,6 +157,11 @@ header{
             font-size: 1.2rem;
             font-weight: 600;
             color: black;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        a:hover{
+            background-color: #ffffff52;
         }
     }
 }

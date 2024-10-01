@@ -30,11 +30,11 @@ main{
         align-items: center;
         gap: 40px;
         margin-top: 380px;
-        margin-bottom: 100px;
+        margin-bottom: 200px;
         img{
-            width: 840px;
+            width: 740px;
             position: absolute;
-            top: 40%;
+            top: 44%;
             z-index: 1;
         }
         input{
@@ -47,7 +47,6 @@ main{
             font-size: 1.2rem;
             color: black;
             z-index: 2;
-
         }
         div{
             display: flex;
@@ -67,6 +66,10 @@ main{
                 margin-bottom: 10px;
                 box-shadow: 0px 5px 5px 1px rgba(0, 0, 0, 0.301);
             }
+            button:active{
+                transform: scale(0.95);
+                box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.301);
+            }
             a{
                 font-size: 0.9rem;
             }
@@ -78,8 +81,7 @@ header{
     justify-content: space-around;
     align-items: center;
     background-color: $cor-primaria;
-    padding: 22px;
-
+    padding: 15px;
     h1{
         font-size: 1.5rem;
     }
@@ -87,7 +89,7 @@ header{
         display: flex;
         align-items: center;
         justify-content: space-between;
-        width: 300px;
+        width: 350px;
 
         a{
             list-style: none;
@@ -95,6 +97,11 @@ header{
             font-size: 1.2rem;
             font-weight: 600;
             color: black;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        a:hover{
+            background-color: #ffffff52;
         }
     }
 }
