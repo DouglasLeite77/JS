@@ -10,11 +10,12 @@ import { FormularioContatoComponent } from '../formulario-contato/formulario-con
 import { RouterLink } from '@angular/router';
 import { ContatoService } from '../../services/contato.service';
 import { contato } from '../../componentes/contato/contato';
+import { PerfilContatosComponent } from '../perfil-contatos/perfil-contatos.component';
 
 @Component({
   selector: 'app-lista-contatos',
   standalone: true,
-  imports: [ContainerComponent, CabecalhoComponent, SeparadorComponent, ContatoComponent, FormsModule, FormularioContatoComponent, RouterLink],
+  imports: [ContainerComponent, CabecalhoComponent, SeparadorComponent, ContatoComponent, FormsModule, FormularioContatoComponent, RouterLink, PerfilContatosComponent],
   templateUrl: './lista-contatos.component.html',
   styleUrl: './lista-contatos.component.css'
 })
@@ -25,7 +26,9 @@ export class ListaContatosComponent implements OnInit{
   constructor(private contatoService: ContatoService){}
 
   ngOnInit() {
-    this.contatos = this.contatoService.obterContatos()
+    this.contatoService.obterContatos().subscribe(listaContatos =>{
+      this.contatos = listaContatos
+    })
   }
 
   filtroPorTexto: string = ""

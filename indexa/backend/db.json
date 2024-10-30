@@ -1,0 +1,31 @@
+{
+  "contatos": [
+    {
+      "nome": "Maria",
+      "telefone": "99 99999999",
+      "email": "maria@email.com",
+      "aniversario": "1995-06-01",
+      "redes": "",
+      "observacoes": "",
+      "id": 1
+    },
+    {
+      "nome": "João",
+      "telefone": "88 88888888",
+      "email": "joao@email.com",
+      "aniversario": "1990-01-06",
+      "redes": "",
+      "observacoes": "",
+      "id": 2
+    },
+    {
+      "nome": "Bedo",
+      "telefone": "88565561",
+      "email": "bedodwe@email.com",
+      "aniversario": "",
+      "rede": "",
+      "observacoes": "",
+      "id": 3
+    }
+  ]
+}
