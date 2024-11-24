@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisar Seriados</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <script src="./js/main.js" defer></script>
+</head>
+<body>
+
+    <h1>Pesquisar Seriados</h1>
+
+    <div class="caixa-pesquisa">
+        <input type="text" id="nomeSeriado" placeholder="Digite o nome do seriado">
+        <button onclick="pesquisarSeriado()">Pesquisar</button>
+    </div>
+
+    <div class="resultado" id="resultado" style="display:none;">
+        <h2 id="tituloSeriado"></h2>
+        <p id="categoriaSeriado"></p>
+        <p id="atoresSeriado"></p>
+        <p id="temporadasSeriado"></p>
+        <p id="episodios"></p>
+    </div>
+</body>
+</html>
+
